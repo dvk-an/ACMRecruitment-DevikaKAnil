@@ -1,0 +1,22 @@
+import re
+def val(pwd):
+    if len(pwd)!=8:
+        return False
+    if not re.search(r'[a-z]',pwd):
+        return False
+    if not re.search(r'[A-Z]',pwd):
+        return False
+    if not re.search(r'[!@#$%^&*()_+{}\[\]:;"\'<>,.?/\\|`~-]',pwd):
+        return False
+    c=pwd[0]
+    if re.match(r'^[\d!@#$%^&*()_+{}\[\]:;"\'<>,.?/\\|`~-]',c):
+        return False
+    if pwd in [ "A1b#cD3e", "Xy4$Zz7!", "P@ssw0rd", "M!n3r4L^", "T7r$eN8f"]:
+        return False
+    return True
+
+pwd = input("Enter your password: ")
+if val(pwd):
+    print("Password is valid.")
+else:
+    print("Password is invalid.")
