@@ -1,0 +1,11 @@
+s=0
+p=1
+for i in range(0,101):
+    s+=i
+p=s**2
+#square of sum
+y=0
+for j in range(0,101):
+    y+=(j**2)
+#sum of squares 
+print(p-y)
