@@ -4,7 +4,7 @@ c=0
 def fn(num):
     if num <= 1:
         return False
-    if num==2:
+    if num==2 or num==3:
         return True  
     if num%2==0:
         return False
