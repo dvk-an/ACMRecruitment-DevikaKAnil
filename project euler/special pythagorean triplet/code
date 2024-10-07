@@ -10,6 +10,6 @@ t=f(sum)
 if t:
     a,b,c=t
     p=a*b*c
-    print("The numbers are:",a,',',b,',',c,)
+    print(p)
 else:
     print("Numbers not found")
