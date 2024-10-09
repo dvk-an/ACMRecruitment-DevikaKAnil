@@ -1,7 +1,10 @@
 import random
+
 board =[' '] * 10
 compt = 'X'
 humn = 'O'
+
+
 def disp(board):
     print('\n')
     print(board[0]+" | "+board[1]+" | "+board[2])
@@ -10,6 +13,8 @@ def disp(board):
     print('--|---|--')
     print(board[6]+" | "+board[7]+" | "+board[8])
     print('\n')
+
+
 def win():
     combo=[(1, 2, 3), (4, 5, 6), (7, 8, 9),
         (1, 4, 7), (2, 5, 8), (3, 6, 9), 
@@ -18,10 +23,12 @@ def win():
         if board[a]==board[b]==board[c] and board[a]!=' ':
             return True
     return False
+
 def draw():
     return ' ' not in board[1:]
 def avail(pos):
     return board[pos] == ' '
+
 def insert(num, pos):
     if avail(pos):
         board[pos]=num
@@ -57,7 +64,9 @@ def hum(num):
                 break
         except ValueError:
             print("Enter position between 1 and 9:")
+    
 def comp(num):
+    
     pos=random.randint(1, 9)
     while not avail(pos):
         pos=random.randint(1,9)
